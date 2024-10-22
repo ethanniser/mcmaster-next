@@ -111,27 +111,27 @@ export default async function RootLayout({
         </div>
         <footer className="flex h-[8px] flex-col items-center justify-between space-y-2 border-t border-gray-400 bg-background px-4 font-helvetica text-[11px] sm:h-6 sm:flex-row sm:space-y-0">
           <div className="flex flex-wrap justify-center space-x-2 pt-2 sm:justify-start">
-            <span className="hover:bg-yellow-100 hover:underline">Home</span>
+            <span className="hover:bg-yellow-100 hover:underline cursor-pointer">Home</span>
             <span>|</span>
-            <span className="hover:bg-yellow-100 hover:underline">
+            <span className="hover:bg-yellow-100 hover:underline cursor-pointer">
               Location
             </span>
             <span>|</span>
-            <span className="hover:bg-yellow-100 hover:underline">Returns</span>
+            <span className="hover:bg-yellow-100 hover:underline cursor-pointer">Returns</span>
             <span>|</span>
-            <span className="hover:bg-yellow-100 hover:underline">Careers</span>
+            <span className="hover:bg-yellow-100 hover:underline cursor-pointer">Careers</span>
             <span>|</span>
-            <span className="hover:bg-yellow-100 hover:underline">
+            <span className="hover:bg-yellow-100 hover:underline cursor-pointer">
               Mobile App
             </span>
             <span>|</span>
-            <span className="hover:bg-yellow-100 hover:underline">
+            <span className="hover:bg-yellow-100 hover:underline cursor-pointer">
               Solidworks Add-In
             </span>
             <span>|</span>
-            <span className="hover:bg-yellow-100 hover:underline">Help</span>
+            <span className="hover:bg-yellow-100 hover:underline cursor-pointer">Help</span>
             <span>|</span>
-            <span className="hover:bg-yellow-100 hover:underline">
+            <span className="hover:bg-yellow-100 hover:underline cursor-pointer">
               Settings
             </span>
           </div>

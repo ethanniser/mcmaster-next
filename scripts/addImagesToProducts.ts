@@ -1,15 +1,7 @@
 import { eq, isNotNull, isNull } from "drizzle-orm";
 import { db } from "../src/db";
 import { categories, products, subcategories } from "../src/db/schema";
-import {
-  Effect,
-  Schedule,
-  Console,
-  Cause,
-  Array,
-  Predicate,
-  Random,
-} from "effect";
+import { Effect, Array, Predicate, Random } from "effect";
 import { NodeRuntime } from "@effect/platform-node";
 
 const main = Effect.gen(function* () {

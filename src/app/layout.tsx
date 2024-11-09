@@ -12,6 +12,7 @@ import { WelcomeToast } from "./welcome-toast";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import { ThemeProvider } from "@/components/theme-provider";
+import ThemeSelector from "@/components/theme-selector";
 
 export const metadata: Metadata = {
   title: {
@@ -114,6 +115,8 @@ export default async function RootLayout({
               <span className="hover:bg-accent2 hover:underline">Careers</span>
               <span>|</span>
               <span className="hover:bg-accent2 hover:underline">Contact</span>
+              <span>|</span>
+              <ThemeSelector />
             </div>
             <div className="text-center sm:text-right">
               By using this website, you agree to check out the{" "}

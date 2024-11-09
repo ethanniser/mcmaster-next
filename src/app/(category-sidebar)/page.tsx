@@ -12,7 +12,7 @@ export default async function Home() {
 
   return (
     <div className="w-full p-4">
-      <div className="mb-2 w-full flex-grow border-b-[1px] border-accent1 text-sm font-semibold text-black">
+      <div className="mb-2 w-full flex-grow border-b-[1px] border-accent1 text-sm font-semibold text-foreground">
         Explore {productCount.at(0)?.count.toLocaleString()} products
       </div>
       {collections.map((collection) => (

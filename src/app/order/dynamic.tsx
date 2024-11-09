@@ -37,7 +37,7 @@ function CartItem({ product }: { product: CartItem }) {
   // limit to 2 decimal places
   const cost = (Number(product.price) * product.quantity).toFixed(2);
   return (
-    <div className="flex flex-row items-center justify-between border-t border-gray-200 pt-4">
+    <div className="flex flex-row items-center justify-between border-t border-gray-200 pt-4 dark:border-gray-900">
       <Link
         prefetch={true}
         href={`/products/${product.subcategory.subcollection.category_slug}/${product.subcategory.slug}/${product.slug}`}

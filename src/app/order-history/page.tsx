@@ -12,7 +12,7 @@ export default async function Page() {
       <h1 className="w-full border-b-2 border-accent1 text-left text-2xl text-accent1">
         Order History
       </h1>
-      <div className="mx-auto flex max-w-md flex-col gap-4 text-black">
+      <div className="mx-auto flex max-w-md flex-col gap-4 text-foreground">
         <Suspense>
           <OrderHistoryDynamic />
         </Suspense>

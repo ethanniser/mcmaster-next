@@ -123,7 +123,7 @@ export function SearchDropdownComponent() {
           />
         </div>
         {isOpen && (
-          <div className="absolute z-10 w-full border border-gray-200 bg-white shadow-lg">
+          <div className="absolute z-10 w-full border border-gray-200 bg-background shadow-lg dark:border-gray-900">
             <ScrollArea className="h-[300px]">
               {filteredItems.length > 0 ? (
                 filteredItems.map((item, index) => (

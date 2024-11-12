@@ -3,7 +3,7 @@ import { getUser } from "@/lib/queries";
 export async function OrderHistoryDynamic() {
   const user = await getUser();
   return user ? (
-    <div className="border-t border-gray-200 pt-4">
+    <div className="border-t border-gray-200 pt-4 dark:border-gray-900">
       <table className="w-full">
         <thead>
           <tr className="text-left text-sm font-medium text-gray-500">
@@ -24,6 +24,8 @@ export async function OrderHistoryDynamic() {
       </table>
     </div>
   ) : (
-    <p className="font-semibold text-black">Log in to view order history</p>
+    <p className="font-semibold text-foreground">
+      Log in to view order history
+    </p>
   );
 }

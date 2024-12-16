@@ -1,0 +1,17 @@
+
+# This is a file for you to write an un-named query.
+# Only one un-named query is allowed per file.
+query {
+  subcollections{
+    name
+    category {
+      slug
+      name
+      collection {
+        name
+        slug
+      }
+      imageUrl
+    }
+  }
+}

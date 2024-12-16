@@ -1,0 +1,104 @@
+extend type Category {
+  """
+  ✨ List `Subcollection` objects in a one-to-many relationship (where `Subcollection`.`category` is this object).
+  """
+  subcollections_on_category(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: Subcollection_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [Subcollection_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+  ): [Subcollection!]! @fdc_generated(from: "Subcollection.category", purpose: QUERY_MULTIPLE_ONE_TO_MANY)
+}
+extend type Collection {
+  """
+  ✨ List `Category` objects in a one-to-many relationship (where `Category`.`collection` is this object).
+  """
+  categories_on_collection(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: Category_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [Category_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+  ): [Category!]! @fdc_generated(from: "Category.collection", purpose: QUERY_MULTIPLE_ONE_TO_MANY)
+}
+extend type Subcategory {
+  """
+  ✨ List `Product` objects in a one-to-many relationship (where `Product`.`subcategory` is this object).
+  """
+  products_on_subcategory(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: Product_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [Product_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+  ): [Product!]! @fdc_generated(from: "Product.subcategory", purpose: QUERY_MULTIPLE_ONE_TO_MANY)
+}
+extend type Subcollection {
+  """
+  ✨ List `Subcategory` objects in a one-to-many relationship (where `Subcategory`.`subcollection` is this object).
+  """
+  subcategories_on_subcollection(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: Subcategory_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [Subcategory_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+  ): [Subcategory!]! @fdc_generated(from: "Subcategory.subcollection", purpose: QUERY_MULTIPLE_ONE_TO_MANY)
+}

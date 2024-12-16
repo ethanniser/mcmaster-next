@@ -1,0 +1,948 @@
+"""
+✨ `Category_KeyOutput` returns the primary key fields of table type `Category`.
+
+It has the same format as `Category_Key`, but is only used as mutation return value.
+"""
+scalar Category_KeyOutput
+"""
+✨ `Collection_KeyOutput` returns the primary key fields of table type `Collection`.
+
+It has the same format as `Collection_Key`, but is only used as mutation return value.
+"""
+scalar Collection_KeyOutput
+"""
+✨ `Product_KeyOutput` returns the primary key fields of table type `Product`.
+
+It has the same format as `Product_Key`, but is only used as mutation return value.
+"""
+scalar Product_KeyOutput
+"""
+✨ `Subcategory_KeyOutput` returns the primary key fields of table type `Subcategory`.
+
+It has the same format as `Subcategory_Key`, but is only used as mutation return value.
+"""
+scalar Subcategory_KeyOutput
+"""
+✨ `Subcollection_KeyOutput` returns the primary key fields of table type `Subcollection`.
+
+It has the same format as `Subcollection_Key`, but is only used as mutation return value.
+"""
+scalar Subcollection_KeyOutput
+"""
+✨ `User_KeyOutput` returns the primary key fields of table type `User`.
+
+It has the same format as `User_Key`, but is only used as mutation return value.
+"""
+scalar User_KeyOutput
+"""
+✨ Generated data input type for table 'Category'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input Category_Data {
+  """
+  ✨ Generated from Field `Category`.`id` of type `String!`
+  """
+  id: String
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Category`.`id` of type `String!`)
+  """
+  id_expr: String_Expr
+  """
+  ✨ Generated from Field `Category`.`collectionId` of type `String!`
+  """
+  collectionId: String
+  """
+  ✨ `_expr` server value variant of `collectionId` (✨ Generated from Field `Category`.`collectionId` of type `String!`)
+  """
+  collectionId_expr: String_Expr
+  """
+  ✨ Generated from Field `Category`.`collection` of type `Collection!`
+  """
+  collection: Collection_Key
+  """
+  ✨ Generated from Field `Category`.`imageUrl` of type `String`
+  """
+  imageUrl: String
+  """
+  ✨ `_expr` server value variant of `imageUrl` (✨ Generated from Field `Category`.`imageUrl` of type `String`)
+  """
+  imageUrl_expr: String_Expr
+  """
+  ✨ Generated from Field `Category`.`name` of type `String!`
+  """
+  name: String
+  """
+  ✨ `_expr` server value variant of `name` (✨ Generated from Field `Category`.`name` of type `String!`)
+  """
+  name_expr: String_Expr
+  """
+  ✨ Generated from Field `Category`.`slug` of type `String!`
+  """
+  slug: String
+  """
+  ✨ `_expr` server value variant of `slug` (✨ Generated from Field `Category`.`slug` of type `String!`)
+  """
+  slug_expr: String_Expr
+}
+"""
+✨ Generated filter input type for table 'Category'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Category_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [Category_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: Category_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [Category_Filter!]
+  """
+  ✨ Generated from Field `Category`.`id` of type `String!`
+  """
+  id: String_Filter
+  """
+  ✨ Generated from Field `Category`.`collectionId` of type `String!`
+  """
+  collectionId: String_Filter
+  """
+  ✨ Generated from Field `Category`.`collection` of type `Collection!`
+  """
+  collection: Collection_Filter
+  """
+  ✨ Generated from Field `Category`.`imageUrl` of type `String`
+  """
+  imageUrl: String_Filter
+  """
+  ✨ Generated from Field `Category`.`name` of type `String!`
+  """
+  name: String_Filter
+  """
+  ✨ Generated from Field `Category`.`slug` of type `String!`
+  """
+  slug: String_Filter
+  """
+  ✨ Generated from Field `Category`.`subcollections_on_category` of type `[Subcollection!]!`
+  """
+  subcollections_on_category: Subcollection_ListFilter
+}
+"""
+✨ Generated first-row input type for table 'Category'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input Category_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [Category_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: Category_Filter
+}
+"""
+✨ Generated key input type for table 'Category'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input Category_Key {
+  """
+  ✨ Generated from Field `Category`.`id` of type `String!`
+  """
+  id: String
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Category`.`id` of type `String!`)
+  """
+  id_expr: String_Expr
+}
+"""
+✨ Generated list filter input type for table 'Category'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input Category_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: Category_Filter
+}
+"""
+✨ Generated order input type for table 'Category'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input Category_Order {
+  """
+  ✨ Generated from Field `Category`.`id` of type `String!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `Category`.`collectionId` of type `String!`
+  """
+  collectionId: OrderDirection
+  """
+  ✨ Generated from Field `Category`.`collection` of type `Collection!`
+  """
+  collection: Collection_Order
+  """
+  ✨ Generated from Field `Category`.`imageUrl` of type `String`
+  """
+  imageUrl: OrderDirection
+  """
+  ✨ Generated from Field `Category`.`name` of type `String!`
+  """
+  name: OrderDirection
+  """
+  ✨ Generated from Field `Category`.`slug` of type `String!`
+  """
+  slug: OrderDirection
+}
+"""
+✨ Generated data input type for table 'Collection'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input Collection_Data {
+  """
+  ✨ Generated from Field `Collection`.`id` of type `String!`
+  """
+  id: String
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Collection`.`id` of type `String!`)
+  """
+  id_expr: String_Expr
+  """
+  ✨ Generated from Field `Collection`.`name` of type `String!`
+  """
+  name: String
+  """
+  ✨ `_expr` server value variant of `name` (✨ Generated from Field `Collection`.`name` of type `String!`)
+  """
+  name_expr: String_Expr
+  """
+  ✨ Generated from Field `Collection`.`slug` of type `String!`
+  """
+  slug: String
+  """
+  ✨ `_expr` server value variant of `slug` (✨ Generated from Field `Collection`.`slug` of type `String!`)
+  """
+  slug_expr: String_Expr
+}
+"""
+✨ Generated filter input type for table 'Collection'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Collection_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [Collection_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: Collection_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [Collection_Filter!]
+  """
+  ✨ Generated from Field `Collection`.`id` of type `String!`
+  """
+  id: String_Filter
+  """
+  ✨ Generated from Field `Collection`.`name` of type `String!`
+  """
+  name: String_Filter
+  """
+  ✨ Generated from Field `Collection`.`slug` of type `String!`
+  """
+  slug: String_Filter
+  """
+  ✨ Generated from Field `Collection`.`categories_on_collection` of type `[Category!]!`
+  """
+  categories_on_collection: Category_ListFilter
+}
+"""
+✨ Generated first-row input type for table 'Collection'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input Collection_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [Collection_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: Collection_Filter
+}
+"""
+✨ Generated key input type for table 'Collection'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input Collection_Key {
+  """
+  ✨ Generated from Field `Collection`.`id` of type `String!`
+  """
+  id: String
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Collection`.`id` of type `String!`)
+  """
+  id_expr: String_Expr
+}
+"""
+✨ Generated list filter input type for table 'Collection'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input Collection_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: Collection_Filter
+}
+"""
+✨ Generated order input type for table 'Collection'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input Collection_Order {
+  """
+  ✨ Generated from Field `Collection`.`id` of type `String!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `Collection`.`name` of type `String!`
+  """
+  name: OrderDirection
+  """
+  ✨ Generated from Field `Collection`.`slug` of type `String!`
+  """
+  slug: OrderDirection
+}
+"""
+✨ Generated data input type for table 'Product'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input Product_Data {
+  """
+  ✨ Generated from Field `Product`.`id` of type `String!`
+  """
+  id: String
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Product`.`id` of type `String!`)
+  """
+  id_expr: String_Expr
+  """
+  ✨ Generated from Field `Product`.`subcategoryId` of type `String!`
+  """
+  subcategoryId: String
+  """
+  ✨ `_expr` server value variant of `subcategoryId` (✨ Generated from Field `Product`.`subcategoryId` of type `String!`)
+  """
+  subcategoryId_expr: String_Expr
+  """
+  ✨ Generated from Field `Product`.`subcategory` of type `Subcategory!`
+  """
+  subcategory: Subcategory_Key
+  """
+  ✨ Generated from Field `Product`.`description` of type `String!`
+  """
+  description: String
+  """
+  ✨ `_expr` server value variant of `description` (✨ Generated from Field `Product`.`description` of type `String!`)
+  """
+  description_expr: String_Expr
+  """
+  ✨ Generated from Field `Product`.`imageUrl` of type `String`
+  """
+  imageUrl: String
+  """
+  ✨ `_expr` server value variant of `imageUrl` (✨ Generated from Field `Product`.`imageUrl` of type `String`)
+  """
+  imageUrl_expr: String_Expr
+  """
+  ✨ Generated from Field `Product`.`name` of type `String!`
+  """
+  name: String
+  """
+  ✨ `_expr` server value variant of `name` (✨ Generated from Field `Product`.`name` of type `String!`)
+  """
+  name_expr: String_Expr
+  """
+  ✨ Generated from Field `Product`.`price` of type `Float!`
+  """
+  price: Float
+  """
+  ✨ Generated from Field `Product`.`slug` of type `String!`
+  """
+  slug: String
+  """
+  ✨ `_expr` server value variant of `slug` (✨ Generated from Field `Product`.`slug` of type `String!`)
+  """
+  slug_expr: String_Expr
+}
+"""
+✨ Generated filter input type for table 'Product'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Product_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [Product_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: Product_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [Product_Filter!]
+  """
+  ✨ Generated from Field `Product`.`id` of type `String!`
+  """
+  id: String_Filter
+  """
+  ✨ Generated from Field `Product`.`subcategoryId` of type `String!`
+  """
+  subcategoryId: String_Filter
+  """
+  ✨ Generated from Field `Product`.`subcategory` of type `Subcategory!`
+  """
+  subcategory: Subcategory_Filter
+  """
+  ✨ Generated from Field `Product`.`description` of type `String!`
+  """
+  description: String_Filter
+  """
+  ✨ Generated from Field `Product`.`imageUrl` of type `String`
+  """
+  imageUrl: String_Filter
+  """
+  ✨ Generated from Field `Product`.`name` of type `String!`
+  """
+  name: String_Filter
+  """
+  ✨ Generated from Field `Product`.`price` of type `Float!`
+  """
+  price: Float_Filter
+  """
+  ✨ Generated from Field `Product`.`slug` of type `String!`
+  """
+  slug: String_Filter
+}
+"""
+✨ Generated first-row input type for table 'Product'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input Product_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [Product_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: Product_Filter
+}
+"""
+✨ Generated key input type for table 'Product'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input Product_Key {
+  """
+  ✨ Generated from Field `Product`.`id` of type `String!`
+  """
+  id: String
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Product`.`id` of type `String!`)
+  """
+  id_expr: String_Expr
+}
+"""
+✨ Generated list filter input type for table 'Product'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input Product_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: Product_Filter
+}
+"""
+✨ Generated order input type for table 'Product'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input Product_Order {
+  """
+  ✨ Generated from Field `Product`.`id` of type `String!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `Product`.`subcategoryId` of type `String!`
+  """
+  subcategoryId: OrderDirection
+  """
+  ✨ Generated from Field `Product`.`subcategory` of type `Subcategory!`
+  """
+  subcategory: Subcategory_Order
+  """
+  ✨ Generated from Field `Product`.`description` of type `String!`
+  """
+  description: OrderDirection
+  """
+  ✨ Generated from Field `Product`.`imageUrl` of type `String`
+  """
+  imageUrl: OrderDirection
+  """
+  ✨ Generated from Field `Product`.`name` of type `String!`
+  """
+  name: OrderDirection
+  """
+  ✨ Generated from Field `Product`.`price` of type `Float!`
+  """
+  price: OrderDirection
+  """
+  ✨ Generated from Field `Product`.`slug` of type `String!`
+  """
+  slug: OrderDirection
+}
+"""
+✨ Generated data input type for table 'Subcategory'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input Subcategory_Data {
+  """
+  ✨ Generated from Field `Subcategory`.`id` of type `String!`
+  """
+  id: String
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Subcategory`.`id` of type `String!`)
+  """
+  id_expr: String_Expr
+  """
+  ✨ Generated from Field `Subcategory`.`subcollectionId` of type `String!`
+  """
+  subcollectionId: String
+  """
+  ✨ `_expr` server value variant of `subcollectionId` (✨ Generated from Field `Subcategory`.`subcollectionId` of type `String!`)
+  """
+  subcollectionId_expr: String_Expr
+  """
+  ✨ Generated from Field `Subcategory`.`subcollection` of type `Subcollection!`
+  """
+  subcollection: Subcollection_Key
+  """
+  ✨ Generated from Field `Subcategory`.`imageUrl` of type `String`
+  """
+  imageUrl: String
+  """
+  ✨ `_expr` server value variant of `imageUrl` (✨ Generated from Field `Subcategory`.`imageUrl` of type `String`)
+  """
+  imageUrl_expr: String_Expr
+  """
+  ✨ Generated from Field `Subcategory`.`name` of type `String!`
+  """
+  name: String
+  """
+  ✨ `_expr` server value variant of `name` (✨ Generated from Field `Subcategory`.`name` of type `String!`)
+  """
+  name_expr: String_Expr
+  """
+  ✨ Generated from Field `Subcategory`.`slug` of type `String!`
+  """
+  slug: String
+  """
+  ✨ `_expr` server value variant of `slug` (✨ Generated from Field `Subcategory`.`slug` of type `String!`)
+  """
+  slug_expr: String_Expr
+}
+"""
+✨ Generated filter input type for table 'Subcategory'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Subcategory_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [Subcategory_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: Subcategory_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [Subcategory_Filter!]
+  """
+  ✨ Generated from Field `Subcategory`.`id` of type `String!`
+  """
+  id: String_Filter
+  """
+  ✨ Generated from Field `Subcategory`.`subcollectionId` of type `String!`
+  """
+  subcollectionId: String_Filter
+  """
+  ✨ Generated from Field `Subcategory`.`subcollection` of type `Subcollection!`
+  """
+  subcollection: Subcollection_Filter
+  """
+  ✨ Generated from Field `Subcategory`.`imageUrl` of type `String`
+  """
+  imageUrl: String_Filter
+  """
+  ✨ Generated from Field `Subcategory`.`name` of type `String!`
+  """
+  name: String_Filter
+  """
+  ✨ Generated from Field `Subcategory`.`slug` of type `String!`
+  """
+  slug: String_Filter
+  """
+  ✨ Generated from Field `Subcategory`.`products_on_subcategory` of type `[Product!]!`
+  """
+  products_on_subcategory: Product_ListFilter
+}
+"""
+✨ Generated first-row input type for table 'Subcategory'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input Subcategory_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [Subcategory_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: Subcategory_Filter
+}
+"""
+✨ Generated key input type for table 'Subcategory'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input Subcategory_Key {
+  """
+  ✨ Generated from Field `Subcategory`.`id` of type `String!`
+  """
+  id: String
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Subcategory`.`id` of type `String!`)
+  """
+  id_expr: String_Expr
+}
+"""
+✨ Generated list filter input type for table 'Subcategory'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input Subcategory_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: Subcategory_Filter
+}
+"""
+✨ Generated order input type for table 'Subcategory'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input Subcategory_Order {
+  """
+  ✨ Generated from Field `Subcategory`.`id` of type `String!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `Subcategory`.`subcollectionId` of type `String!`
+  """
+  subcollectionId: OrderDirection
+  """
+  ✨ Generated from Field `Subcategory`.`subcollection` of type `Subcollection!`
+  """
+  subcollection: Subcollection_Order
+  """
+  ✨ Generated from Field `Subcategory`.`imageUrl` of type `String`
+  """
+  imageUrl: OrderDirection
+  """
+  ✨ Generated from Field `Subcategory`.`name` of type `String!`
+  """
+  name: OrderDirection
+  """
+  ✨ Generated from Field `Subcategory`.`slug` of type `String!`
+  """
+  slug: OrderDirection
+}
+"""
+✨ Generated data input type for table 'Subcollection'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input Subcollection_Data {
+  """
+  ✨ Generated from Field `Subcollection`.`id` of type `String!`
+  """
+  id: String
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Subcollection`.`id` of type `String!`)
+  """
+  id_expr: String_Expr
+  """
+  ✨ Generated from Field `Subcollection`.`categoryId` of type `String!`
+  """
+  categoryId: String
+  """
+  ✨ `_expr` server value variant of `categoryId` (✨ Generated from Field `Subcollection`.`categoryId` of type `String!`)
+  """
+  categoryId_expr: String_Expr
+  """
+  ✨ Generated from Field `Subcollection`.`category` of type `Category!`
+  """
+  category: Category_Key
+  """
+  ✨ Generated from Field `Subcollection`.`name` of type `String!`
+  """
+  name: String
+  """
+  ✨ `_expr` server value variant of `name` (✨ Generated from Field `Subcollection`.`name` of type `String!`)
+  """
+  name_expr: String_Expr
+}
+"""
+✨ Generated filter input type for table 'Subcollection'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Subcollection_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [Subcollection_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: Subcollection_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [Subcollection_Filter!]
+  """
+  ✨ Generated from Field `Subcollection`.`id` of type `String!`
+  """
+  id: String_Filter
+  """
+  ✨ Generated from Field `Subcollection`.`categoryId` of type `String!`
+  """
+  categoryId: String_Filter
+  """
+  ✨ Generated from Field `Subcollection`.`category` of type `Category!`
+  """
+  category: Category_Filter
+  """
+  ✨ Generated from Field `Subcollection`.`name` of type `String!`
+  """
+  name: String_Filter
+  """
+  ✨ Generated from Field `Subcollection`.`subcategories_on_subcollection` of type `[Subcategory!]!`
+  """
+  subcategories_on_subcollection: Subcategory_ListFilter
+}
+"""
+✨ Generated first-row input type for table 'Subcollection'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input Subcollection_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [Subcollection_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: Subcollection_Filter
+}
+"""
+✨ Generated key input type for table 'Subcollection'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input Subcollection_Key {
+  """
+  ✨ Generated from Field `Subcollection`.`id` of type `String!`
+  """
+  id: String
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Subcollection`.`id` of type `String!`)
+  """
+  id_expr: String_Expr
+}
+"""
+✨ Generated list filter input type for table 'Subcollection'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input Subcollection_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: Subcollection_Filter
+}
+"""
+✨ Generated order input type for table 'Subcollection'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input Subcollection_Order {
+  """
+  ✨ Generated from Field `Subcollection`.`id` of type `String!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `Subcollection`.`categoryId` of type `String!`
+  """
+  categoryId: OrderDirection
+  """
+  ✨ Generated from Field `Subcollection`.`category` of type `Category!`
+  """
+  category: Category_Order
+  """
+  ✨ Generated from Field `Subcollection`.`name` of type `String!`
+  """
+  name: OrderDirection
+}
+"""
+✨ Generated data input type for table 'User'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input User_Data {
+  """
+  ✨ Generated from Field `User`.`id` of type `String!`
+  """
+  id: String
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `User`.`id` of type `String!`)
+  """
+  id_expr: String_Expr
+  """
+  ✨ Generated from Field `User`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp
+  """
+  ✨ `_expr` server value variant of `createdAt` (✨ Generated from Field `User`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_expr: Timestamp_Expr
+  """
+  ✨ `_time` server value variant of `createdAt` (✨ Generated from Field `User`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_time: Timestamp_Relative
+  """
+  ✨ Generated from Field `User`.`passwordHash` of type `String!`
+  """
+  passwordHash: String
+  """
+  ✨ `_expr` server value variant of `passwordHash` (✨ Generated from Field `User`.`passwordHash` of type `String!`)
+  """
+  passwordHash_expr: String_Expr
+  """
+  ✨ Generated from Field `User`.`updatedAt` of type `Timestamp!`
+  """
+  updatedAt: Timestamp
+  """
+  ✨ `_expr` server value variant of `updatedAt` (✨ Generated from Field `User`.`updatedAt` of type `Timestamp!`)
+  """
+  updatedAt_expr: Timestamp_Expr
+  """
+  ✨ `_time` server value variant of `updatedAt` (✨ Generated from Field `User`.`updatedAt` of type `Timestamp!`)
+  """
+  updatedAt_time: Timestamp_Relative
+  """
+  ✨ Generated from Field `User`.`username` of type `String!`
+  """
+  username: String
+  """
+  ✨ `_expr` server value variant of `username` (✨ Generated from Field `User`.`username` of type `String!`)
+  """
+  username_expr: String_Expr
+}
+"""
+✨ Generated filter input type for table 'User'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input User_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [User_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: User_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [User_Filter!]
+  """
+  ✨ Generated from Field `User`.`id` of type `String!`
+  """
+  id: String_Filter
+  """
+  ✨ Generated from Field `User`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp_Filter
+  """
+  ✨ Generated from Field `User`.`passwordHash` of type `String!`
+  """
+  passwordHash: String_Filter
+  """
+  ✨ Generated from Field `User`.`updatedAt` of type `Timestamp!`
+  """
+  updatedAt: Timestamp_Filter
+  """
+  ✨ Generated from Field `User`.`username` of type `String!`
+  """
+  username: String_Filter
+}
+"""
+✨ Generated first-row input type for table 'User'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input User_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [User_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: User_Filter
+}
+"""
+✨ Generated key input type for table 'User'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input User_Key {
+  """
+  ✨ Generated from Field `User`.`id` of type `String!`
+  """
+  id: String
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `User`.`id` of type `String!`)
+  """
+  id_expr: String_Expr
+}
+"""
+✨ Generated list filter input type for table 'User'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input User_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: User_Filter
+}
+"""
+✨ Generated order input type for table 'User'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input User_Order {
+  """
+  ✨ Generated from Field `User`.`id` of type `String!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `User`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: OrderDirection
+  """
+  ✨ Generated from Field `User`.`passwordHash` of type `String!`
+  """
+  passwordHash: OrderDirection
+  """
+  ✨ Generated from Field `User`.`updatedAt` of type `Timestamp!`
+  """
+  updatedAt: OrderDirection
+  """
+  ✨ Generated from Field `User`.`username` of type `String!`
+  """
+  username: OrderDirection
+}

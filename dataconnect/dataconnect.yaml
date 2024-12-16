@@ -1,0 +1,12 @@
+specVersion: "v1beta"
+serviceId: "next-faster-data-connect"
+location: "us-east1"
+schema:
+  source: "./schema"
+  datasource:
+    postgresql:
+      database: "next-faster-firebase-db"
+      cloudSql:
+        instanceId: "next-faster"
+      schemaValidation: "STRICT"
+connectorDirs: ["./connector"]

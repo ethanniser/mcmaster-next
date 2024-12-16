@@ -1,0 +1,290 @@
+extend type Query {
+  """
+  ✨ Look up a single `Category` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  category(
+    """
+    The unique ID of the object.
+    """
+    id: String
+
+    """
+    ✨ `_expr` server value variant of `id` (The unique ID of the object.)
+    """
+    id_expr: String_Expr
+
+    """
+    The key used to identify the object.
+    """
+    key: Category_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Category_FirstRow
+  ): Category @fdc_generated(from: "Category", purpose: QUERY_SINGLE)
+  """
+  ✨ Look up a single `Collection` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  collection(
+    """
+    The unique ID of the object.
+    """
+    id: String
+
+    """
+    ✨ `_expr` server value variant of `id` (The unique ID of the object.)
+    """
+    id_expr: String_Expr
+
+    """
+    The key used to identify the object.
+    """
+    key: Collection_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Collection_FirstRow
+  ): Collection @fdc_generated(from: "Collection", purpose: QUERY_SINGLE)
+  """
+  ✨ Look up a single `Product` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  product(
+    """
+    The unique ID of the object.
+    """
+    id: String
+
+    """
+    ✨ `_expr` server value variant of `id` (The unique ID of the object.)
+    """
+    id_expr: String_Expr
+
+    """
+    The key used to identify the object.
+    """
+    key: Product_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Product_FirstRow
+  ): Product @fdc_generated(from: "Product", purpose: QUERY_SINGLE)
+  """
+  ✨ Look up a single `Subcategory` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  subcategory(
+    """
+    The unique ID of the object.
+    """
+    id: String
+
+    """
+    ✨ `_expr` server value variant of `id` (The unique ID of the object.)
+    """
+    id_expr: String_Expr
+
+    """
+    The key used to identify the object.
+    """
+    key: Subcategory_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Subcategory_FirstRow
+  ): Subcategory @fdc_generated(from: "Subcategory", purpose: QUERY_SINGLE)
+  """
+  ✨ Look up a single `Subcollection` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  subcollection(
+    """
+    The unique ID of the object.
+    """
+    id: String
+
+    """
+    ✨ `_expr` server value variant of `id` (The unique ID of the object.)
+    """
+    id_expr: String_Expr
+
+    """
+    The key used to identify the object.
+    """
+    key: Subcollection_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Subcollection_FirstRow
+  ): Subcollection @fdc_generated(from: "Subcollection", purpose: QUERY_SINGLE)
+  """
+  ✨ Look up a single `User` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  user(
+    """
+    The unique ID of the object.
+    """
+    id: String
+
+    """
+    ✨ `_expr` server value variant of `id` (The unique ID of the object.)
+    """
+    id_expr: String_Expr
+
+    """
+    The key used to identify the object.
+    """
+    key: User_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: User_FirstRow
+  ): User @fdc_generated(from: "User", purpose: QUERY_SINGLE)
+  """
+  ✨ List `Category` objects in the table, optionally filtered by `where` conditions.
+  """
+  categories(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: Category_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [Category_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+  ): [Category!]! @fdc_generated(from: "Category", purpose: QUERY_MULTIPLE)
+  """
+  ✨ List `Collection` objects in the table, optionally filtered by `where` conditions.
+  """
+  collections(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: Collection_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [Collection_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+  ): [Collection!]! @fdc_generated(from: "Collection", purpose: QUERY_MULTIPLE)
+  """
+  ✨ List `Product` objects in the table, optionally filtered by `where` conditions.
+  """
+  products(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: Product_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [Product_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+  ): [Product!]! @fdc_generated(from: "Product", purpose: QUERY_MULTIPLE)
+  """
+  ✨ List `Subcategory` objects in the table, optionally filtered by `where` conditions.
+  """
+  subcategories(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: Subcategory_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [Subcategory_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+  ): [Subcategory!]! @fdc_generated(from: "Subcategory", purpose: QUERY_MULTIPLE)
+  """
+  ✨ List `Subcollection` objects in the table, optionally filtered by `where` conditions.
+  """
+  subcollections(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: Subcollection_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [Subcollection_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+  ): [Subcollection!]! @fdc_generated(from: "Subcollection", purpose: QUERY_MULTIPLE)
+  """
+  ✨ List `User` objects in the table, optionally filtered by `where` conditions.
+  """
+  users(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: User_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [User_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+  ): [User!]! @fdc_generated(from: "User", purpose: QUERY_MULTIPLE)
+}

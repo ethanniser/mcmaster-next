@@ -35,3 +35,11 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .env
+
+dataconnect/seed/raw-data
+dataconnect/seed/seed-mutations
+dataconnect-debug.log
+.firebaserc
+firebase-debug.log
+.firebase
+data/data.sql
